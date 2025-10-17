@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IXVC1lbSbUm4VteVlTaoYA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="68db7bbc-eee1-4930-b744-65e18ee6804c" CvElementArea="685, 371, 241, 36" CvType="InputBox" DesignTimeRectangle="689, 361, 234, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl name='K8PyN' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' matching:name='fuzzy' fuzzylevel:name='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="57a6dd31-918e-425b-84de-5b57491b01ac" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="68db7bbc-eee1-4930-b744-65e18ee6804c" CvTextArea="688, 344, 90, 12" CvTextArgument="Phone Number" CvType="Text" DesignTimeRectangle="689, 342, 89, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Phone Number' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Phone Number' /&gt;" Guid="9b284757-13ea-4c22-a26b-c1cb9aab485f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="0ecc502c701e7b27d449cd5f9c4ed4e1.png" xmlns="">08y1dJ7LWCUSMpIeGLgWfsQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

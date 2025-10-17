@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="C-QnwttTHk6H1DciuKXitA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="webscraper.io/test-sites/e-commerce/allinone/computers/laptops" CVScreenId="0f7f0700-d58e-4422-9157-5d55ec1db63d" CvTextArea="377, 577, 149, 17" CvTextArgument="Asus VivoBook..." CvType="Text" DesignTimeRectangle="379, 576, 146, 22" ElementType="Text" FullSelectorArgument="&lt;webctrl class='title' tag='A' /&gt;" Guid="8b632b26-34de-4a8e-b823-0bf3270d8e54" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Allinone | Web Scraper Test Sites' /&gt;" SearchSteps="Selector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="955bd0b9cd0bde8ed56a3a2e26851ba0.png" xmlns="">0ubn5d4DsOEqfkLCasIStMw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

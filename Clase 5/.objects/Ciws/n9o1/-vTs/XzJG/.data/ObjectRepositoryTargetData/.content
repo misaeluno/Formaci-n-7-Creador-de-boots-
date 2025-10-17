@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="fz1lyxTw-UWVP2FtdI2Tog" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="rpachallenge.com" CVScreenId="68db7bbc-eee1-4930-b744-65e18ee6804c" CvElementArea="429, 373, 240, 35" CvType="InputBox" DesignTimeRectangle="432, 361, 234, 46" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='plWAm' tag='INPUT' type='' class='ng-untouched ng-pristine ng-invalid' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="6384d7fe-dcff-4095-9622-1b7a6d2b6635" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Rpa Challenge' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="68db7bbc-eee1-4930-b744-65e18ee6804c" CvTextArea="430, 345, 102, 14" CvTextArgument="Company Name" CvType="Text" DesignTimeRectangle="432, 342, 99, 17" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Company Name' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Company Name' /&gt;" Guid="1b1579f4-1be1-4746-b492-6a451184f01f" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="fec9e059022e5c7260a85ecc5c921e8a.png" xmlns="">0ZDUGPJXdJ0ecyWlklefxPA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

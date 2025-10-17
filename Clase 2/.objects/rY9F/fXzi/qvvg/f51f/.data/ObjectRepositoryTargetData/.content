@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="FDW8hch3OEyJp4k319voEA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="webscraper.io/test-sites/e-commerce/allinone/computers/laptops" DesignTimeRectangle="369, 431, 258, 289" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" Guid="5d7afd0b-62e9-4ce2-ba4d-988bec181951" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Allinone | Web Scraper Test Sites' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="fb5e41c3b143ad4cd952127bebb13042.png" xmlns="">07lx45oKer02yQXm9OhrOBw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

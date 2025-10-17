@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Allinone  Web Scraper Test Sites",
+  "Type": "App",
+  "Id": "rY9FhSuMmEGiRT3BI3EnPA",
+  "Reference": "JLQ-U7Pax0yAzAwOxwp75g/rY9FhSuMmEGiRT3BI3EnPA",
+  "Created": "2025-09-26T11:28:27.8529014Z",
+  "Updated": "2025-09-26T11:28:27.8529014Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

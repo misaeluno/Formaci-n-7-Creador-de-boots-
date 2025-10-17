@@ -1,0 +1,13 @@
+﻿{
+  "Name": "$295.99 Asus VivoBook..…",
+  "Type": "Element",
+  "Id": "f51fhry0w0yu6btgWYPcTw",
+  "Reference": "JLQ-U7Pax0yAzAwOxwp75g/f51fhry0w0yu6btgWYPcTw",
+  "ParentRef": "JLQ-U7Pax0yAzAwOxwp75g/qvvg-A9IUE2dce0J0BIGtg",
+  "Created": "2025-09-26T11:46:22.2340901Z",
+  "Updated": "2025-09-26T11:46:22.2340901Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.13.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
