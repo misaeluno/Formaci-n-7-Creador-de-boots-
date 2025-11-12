@@ -1,0 +1,11 @@
+.screenshots/*
+!.screenshots/.gitkeep
+Exceptions_Screenshots/*
+!Exceptions_Screenshots/.gitkeep
+.local/*
+!.local/.gitkeep
+# Ignorar todos los archivos Excel
+*.xlsx
+*.xls
+*.xlsm
+*.JPG
