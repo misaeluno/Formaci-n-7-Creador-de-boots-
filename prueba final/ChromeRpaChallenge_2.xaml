@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ChromeRpaChallenge" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ChromeRpaChallenge" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="currentTransaction" Type="InOutArgument(ui:QueueItem)" />
   </x:Members>
@@ -111,7 +111,12 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="938.6666666666666,5153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="640.6666666666666,5210.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_Social_Number" />
       <Variable x:TypeArguments="x:String" Name="str_last_name" />
@@ -132,46 +137,52 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="False" DisplayName="Reintentar ámbito" sap:VirtualizedContainerService.HintSize="619.3333333333334,5130.666666666667" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
-      <ui:RetryScope.ActivityBody>
-        <ActivityAction>
-          <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="617.3333333333334,4868.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_12">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome ACME System 1 - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="619.3333333333334,5188" sap2010:WorkflowViewState.IdRef="NApplicationCard_8" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.IfNotOpen]" ScopeGuid="59a02f83-49c1-4b59-8c18-2564451de933" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="617.3333333333334,4993.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_32">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome ACME System 1 - National Insurance Pla" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="583.3333333333334,4641.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Version="V2">
-              <uix:NApplicationCard.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="581.3333333333334,4437.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="False" DisplayName="Reintentar ámbito" sap:VirtualizedContainerService.HintSize="583.3333333333334,4933.333333333333" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
+              <ui:RetryScope.ActivityBody>
+                <ActivityAction>
+                  <Sequence DisplayName="Acción" sap:VirtualizedContainerService.HintSize="581.3333333333334,4671.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_12">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="547.3333333333334,4377.333333333333" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                    <TryCatch DisplayName="Intentar capturar" sap:VirtualizedContainerService.HintSize="547.3333333333334,4386.666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence DisplayName="Intentar" sap:VirtualizedContainerService.HintSize="545.3333333333334,3776.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                        <Sequence DisplayName="Intentar" sap:VirtualizedContainerService.HintSize="545.3333333333334,3776.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_35">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="511.3333333333333,3716.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="511.3333333333333,3716.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_34">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="477.3333333333333,517.3333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_7">
+                            <ui:MultipleAssign DisplayName="Asignación múltiple" sap:VirtualizedContainerService.HintSize="477.3333333333333,517.3333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_8">
                               <ui:MultipleAssign.AssignOperations>
                                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_54">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Social_Number]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -179,7 +190,7 @@
                                       <InArgument x:TypeArguments="x:String">[CurrentTransaction.SpecificContent("Social_Number").ToString]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_55">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_first_name]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -187,7 +198,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("first_name").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_43">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_56">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_last_name]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -195,7 +206,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("last_name").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_57">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_gender]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -203,7 +214,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("gender").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_45">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_58">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_email]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -211,7 +222,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("email").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_59">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Patient_ID]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -219,7 +230,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Patient_ID").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_60">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Care_type]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -227,7 +238,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Care_type").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_61">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Insurance_Type]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -235,7 +246,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Insurance_Type").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_49">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_62">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Diagnosis_Code]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -243,7 +254,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Diagnosis_Code").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_50">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_63">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Diagnosis_Description]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -251,7 +262,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Diagnosis_Description").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_51">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_64">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Procedure_Code]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -259,7 +270,7 @@
                                       <InArgument x:TypeArguments="x:String">[currentTransaction.SpecificContent("Procedure_Code").ToString()]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_52">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_65">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Procedure_Description]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -267,7 +278,7 @@
                                       <InArgument x:TypeArguments="x:String">[CurrentTransaction.SpecificContent("Procedure_Description").ToString]</InArgument>
                                     </ui:AssignOperation.Value>
                                   </ui:AssignOperation>
-                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_53">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_66">
                                     <ui:AssignOperation.To>
                                       <OutArgument x:TypeArguments="x:String">[str_Medication]</OutArgument>
                                     </ui:AssignOperation.To>
@@ -284,18 +295,18 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:MultipleAssign>
-                            <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="477.3333333333333,3116.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                            <Sequence DisplayName="Secuencia" sap:VirtualizedContainerService.HintSize="477.3333333333333,3116.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_33">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Social Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_23" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Social_Number]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Social Number'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_34" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Social_Number]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="b3cad2d8-42a3-4495-bf48-719ddd4a3452" ContentHash="gtbdJxfv9EKvvwAciKZHcQ" CvElementArea="208, 502, 730, 55" CvType="InputBox" DesignTimeRectangle="210, 504, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='social_number' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="f93d6033-a9f3-43a9-b35e-b0aa5b3a76ac" InformativeScreenshot="0c21824010493a6f5984815c30128c23.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/w0bPZEn8SUK5kUuuh4sXjg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="b3cad2d8-42a3-4495-bf48-719ddd4a3452" CvTextArea="207, 471, 156, 19" CvTextArgument="Social Number:" CvType="Text" DesignTimeRectangle="210, 467, 154, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Social Number:' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Social Number:' /&gt;" Guid="6b28265e-c914-46c3-a232-945c40dc9194" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
@@ -303,158 +314,238 @@
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
                                   <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
                                     <uix:VerifyExecutionTypeIntoOptions.Timeout>
                                       <InArgument x:TypeArguments="x:Double" />
                                     </uix:VerifyExecutionTypeIntoOptions.Timeout>
                                   </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'First Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_30" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_first_name]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'First Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_35" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_first_name]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" ContentHash="r0cjsbwOA0a69t1DL3G1xQ" CvElementArea="207, 751, 732, 55" CvType="InputBox" DesignTimeRectangle="210, 753, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='firstname' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="d6bc6071-4d72-4539-9241-e32cb854123f" InformativeScreenshot="f85bc260b84ee504b5f9e8f94a6c8c21.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/5KHlD1oaPkC_kLMeSuRWgA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" CvTextArea="207, 720, 117, 19" CvTextArgument="First Name:" CvType="Text" DesignTimeRectangle="210, 716, 115, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='First Name:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='First Name:' /&gt;" Guid="e428fd76-83dc-4dee-9fe6-6c360848c9fa" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Last Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_29" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_last_name]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Last Name'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_36" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_last_name]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" ContentHash="fhV-MidlL0SLi55VGNoPQg" CvElementArea="208, 862, 730, 55" CvType="InputBox" DesignTimeRectangle="210, 864, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='lastname' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fe775a13-4e8a-46fe-a5f9-2228eb28cd7b" InformativeScreenshot="d12335d44c7c2df10501838e06d2c681.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/MjxgJICeuESYjQGjk6ffiA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" CvTextArea="209, 831, 112, 20" CvTextArgument="Last Name:" CvType="Text" DesignTimeRectangle="210, 827, 113, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Last Name:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Last Name:' /&gt;" Guid="a5416216-ae45-4258-a66f-f7f89733f80a" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_28" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_email]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Email'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_37" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_email]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" ContentHash="iInr5DODREWXwZBmC_ZE_A" CvElementArea="207, 973, 732, 45" CvType="InputBox" DesignTimeRectangle="210, 975, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4706d4a6-d8a2-4b44-ac83-c18790cc9a3f" InformativeScreenshot="6db28021b9547fbeedae562875fa06c1.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/RrWntlaj2U2aZIhFZUBfZA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="37d078f8-a0b8-4dcc-b5ed-81206256f758" CvTextArea="207, 942, 64, 19" CvTextArgument="Email:" CvType="Text" DesignTimeRectangle="210, 938, 63, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Email:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Email:' /&gt;" Guid="97ab3bea-7424-419f-a986-d8fbc417e76f" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Gender'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_27" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_gender]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Gender'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_38" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_gender]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" ContentHash="SL6lUQfvDUi82pim_XSNKw" CvElementArea="209, 484, 729, 54" CvType="InputBox" DesignTimeRectangle="210, 486, 727, 51" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='gender' tag='SELECT' type='' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a70fc8e9-fc31-449d-9d22-8b801dae3088" InformativeScreenshot="3c542b6de98b583c32fd888fcfebdb6a.png" Reference="XJ_4MSH4jkCf8DDO83VaPA/W4XYgiTjmEKUfBJ_7XliQA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="207, 453, 81, 19" CvTextArgument="Gender:" CvType="Text" DesignTimeRectangle="210, 449, 80, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Gender:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Gender:' /&gt;" Guid="1f0bb2ea-1dd5-4885-b266-0a649ba4626e" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Care type'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_26" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Care_type]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Care type'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_39" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Care_type]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" ContentHash="F1s_YqT7bECw6AdpWCM9eQ" CvElementArea="209, 595, 730, 55" CvType="InputBox" DesignTimeRectangle="210, 597, 727, 51" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='care_type' tag='SELECT' type='' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="83f1ef06-3077-466d-bf4e-6e555b774088" InformativeScreenshot="0ab15f6da3b1c07e545ea2c360512f28.png" Reference="XJ_4MSH4jkCf8DDO83VaPA/ALyjWOQEJUOfYw6YR9kKlg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="207, 564, 104, 24" CvTextArgument="Care type:" CvType="Text" DesignTimeRectangle="210, 560, 102, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Care type:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Care type:' /&gt;" Guid="4dbde409-3908-4323-b9a4-09ace3ade84d" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Diagnosis Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_25" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Diagnosis_Code]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Diagnosis Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_40" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Diagnosis_Code]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" ContentHash="42FAHx35NE6NPgwjc2Mgpw" CvElementArea="209, 706, 729, 55" CvType="InputBox" DesignTimeRectangle="210, 708, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='diagnosis_code' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="cfc2159d-7798-4421-bdb1-6c216971cd7a" InformativeScreenshot="8675de86feadc6956d698604095788cf.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/VKgQibFQyUOXOgoWolCTjg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="209, 675, 165, 24" CvTextArgument="Diagnosis Code:" CvType="Text" DesignTimeRectangle="210, 671, 165, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Diagnosis Code:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Diagnosis Code:' /&gt;" Guid="b698f591-445a-470a-b5bd-9f3906fdff84" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Diagnosis Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_24" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Diagnosis_Description]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Diagnosis Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_41" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Diagnosis_Description]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" ContentHash="zaGsjlNAvkGH3T6-xNM2uw" CvElementArea="207, 817, 732, 85" CvType="InputBox" DesignTimeRectangle="210, 819, 727, 80" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='diagnosis_description' tag='TEXTAREA' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4231b3f6-f85d-4ace-b663-85ee0b5631b4" InformativeScreenshot="bfe66aa9556182a8d529aaf736e328ac.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/cyzTr0u4OEeqhozquuVIUw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="207, 786, 231, 24" CvTextArgument="Diagnosis Description:" CvType="Text" DesignTimeRectangle="210, 782, 228, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Diagnosis Description:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Diagnosis Description:' /&gt;" Guid="0fefd445-80d9-4476-9704-7e9cdc9b0f99" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Procedure Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_31" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Procedure_Code]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Procedure Code'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_42" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Procedure_Code]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" ContentHash="vx40qJQbfU2u_VLTxC7NqA" CvElementArea="207, 507, 730, 56" CvType="InputBox" DesignTimeRectangle="210, 509, 727, 51" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='procedure_code' tag='INPUT' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="bfd37c65-3964-4219-b479-86d6d228b9d5" InformativeScreenshot="81709a12b34bac952a3f7e016eb48fd6.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/ddm4Lwz5SUyZBoy0JleDFw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" CvTextArea="207, 477, 171, 19" CvTextArgument="Procedure Code:" CvType="Text" DesignTimeRectangle="210, 472, 169, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Procedure Code:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Procedure Code:' /&gt;" Guid="22bbbb88-c4b4-41bf-9f92-46f178c3d9ee" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Procedure Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_32" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Procedure_Description]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Procedure Description'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_43" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Procedure_Description]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" ContentHash="Rl_euJnwekW2G79-HcDhpQ" CvElementArea="206, 617, 733, 86" CvType="InputBox" DesignTimeRectangle="210, 620, 727, 80" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='procedure_description' tag='TEXTAREA' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="61bf91ce-3307-4a1e-80da-94fafdafb0f8" InformativeScreenshot="c21da54ff3d611b6a2ca9941eadc834a.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/8Dk3DUW94Ueog0xHLENKyQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" CvTextArea="207, 587, 234, 25" CvTextArgument="Procedure Description:" CvType="Text" DesignTimeRectangle="210, 583, 232, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Procedure Description:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Procedure Description:' /&gt;" Guid="27b1d8e9-347d-4b36-affc-227d6d8eef96" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Medication'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_33" InteractionMode="SameAsCard" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Text="[str_Medication]" Version="V5">
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Escribir en 'Medication'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,248" sap2010:WorkflowViewState.IdRef="NTypeInto_44" InteractionMode="SameAsCard" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Text="[str_Medication]" Version="V5">
                                 <uix:NTypeInto.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" ContentHash="pSyW3lbddkWf_LXJPTx9jw" CvElementArea="206, 757, 733, 84" CvType="InputBox" DesignTimeRectangle="210, 760, 727, 80" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='medication' tag='TEXTAREA' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e8ca374f-58e4-410a-88ac-8c9f7d7e010e" InformativeScreenshot="826a193de845bf7c2bfb0a62ce470dc2.png" IsResponsive="True" Reference="XJ_4MSH4jkCf8DDO83VaPA/Emhx66xjF0SFs8BL800V0w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                                     <uix:TargetAnchorable.Anchors>
-                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                         <uix:Target CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" CvTextArea="207, 728, 118, 19" CvTextArgument="Medication:" CvType="Text" DesignTimeRectangle="210, 723, 116, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Medication:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Medication:' /&gt;" Guid="f8bb8178-a510-4627-87d2-1a979277f692" SearchSteps="FuzzySelector, CV" />
                                       </scg:List>
                                     </uix:TargetAnchorable.Anchors>
                                   </uix:TargetAnchorable>
                                 </uix:NTypeInto.Target>
                                 <uix:NTypeInto.VerifyOptions>
-                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears" />
+                                  <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" ExpectedText="[Nothing]" Mode="Appears">
+                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                  </uix:VerifyExecutionTypeIntoOptions>
                                 </uix:NTypeInto.VerifyOptions>
                               </uix:NTypeInto>
-                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Save Details'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,306" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cff68d6f-058c-4c39-bde2-8c2586a7cec7" Version="V5">
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Clic 'Save Details'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,306" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="59a02f83-49c1-4b59-8c18-2564451de933" Version="V5">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="56301c4d-0c8f-4148-85be-9842d547ab7c" ContentHash="dlFD0jNncEmMq8mfBT2pIA" CvElementArea="207, 711, 159, 55" CvTextArea="225, 728, 122, 19" CvTextArgument="Save Details" CvType="Button" DesignTimeRectangle="210, 713, 155, 50" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='buttonScoreCard' tag='BUTTON' /&gt;" Guid="57f38997-a29c-4614-a02c-f252eb151edc" InformativeScreenshot="c205253e7fc45677d5c9075912b4ea55.png" Reference="XJ_4MSH4jkCf8DDO83VaPA/U8EHwuPUpUqWDBQ-5ZlYcQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
                                 </uix:NClick.Target>
                                 <uix:NClick.VerifyOptions>
-                                  <uix:VerifyExecutionOptions DisplayName="Destino de la verificación" Mode="Appears" />
+                                  <uix:VerifyExecutionOptions DisplayName="Destino de la verificación" Mode="Appears">
+                                    <uix:VerifyExecutionOptions.Retry>
+                                      <InArgument x:TypeArguments="x:Boolean" />
+                                    </uix:VerifyExecutionOptions.Retry>
+                                    <uix:VerifyExecutionOptions.Timeout>
+                                      <InArgument x:TypeArguments="x:Double" />
+                                    </uix:VerifyExecutionOptions.Timeout>
+                                  </uix:VerifyExecutionOptions>
                                 </uix:NClick.VerifyOptions>
                               </uix:NClick>
                             </Sequence>
@@ -462,18 +553,19 @@
                         </Sequence>
                       </TryCatch.Try>
                       <TryCatch.Catches>
-                        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                           <ActivityAction x:TypeArguments="s:Exception">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.3333333333334,351.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.3333333333334,351.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_36">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="511.3333333333333,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="511.3333333333333,176.66666666666666" sap2010:WorkflowViewState.IdRef="Assign_8">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:Object">[CurrentTransaction.SpecificContent("Estado")]</OutArgument>
                                 </Assign.To>
@@ -481,13 +573,13 @@
                                   <InArgument x:TypeArguments="x:Object">["No Registrado"]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <Throw DisplayName="Lanzar excepción" Exception="[New Exception(&quot;Falo transaccion&quot;)]" sap:VirtualizedContainerService.HintSize="511.3333333333333,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                              <Throw DisplayName="Lanzar excepción" Exception="[New Exception(&quot;Falo transaccion&quot;)]" sap:VirtualizedContainerService.HintSize="511.3333333333333,114.66666666666667" sap2010:WorkflowViewState.IdRef="Throw_5" />
                             </Sequence>
                           </ActivityAction>
                         </Catch>
                       </TryCatch.Catches>
                       <TryCatch.Finally>
-                        <Sequence DisplayName="Finalmente" sap:VirtualizedContainerService.HintSize="545.3333333333334,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <Sequence DisplayName="Finalmente" sap:VirtualizedContainerService.HintSize="545.3333333333334,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_37">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -496,36 +588,104 @@
                         </Sequence>
                       </TryCatch.Finally>
                     </TryCatch>
+                    <ui:CommentOut DisplayName="Comentar" sap:VirtualizedContainerService.HintSize="547.3333333333334,57.333333333333336" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="486,345.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome ACME System 1 - Dashboard" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="452,285.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_9" InteractionMode="DebuggerApi" ScopeGuid="bb3f0ebf-39e8-485e-8e98-37c0b3a3285d" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="450,90.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.OCREngine>
+                              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                <ActivityFunc.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                </ActivityFunc.Argument>
+                              </ActivityFunc>
+                            </uix:NApplicationCard.OCREngine>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="QwRYmqfR1kmQVhUW2AHaKg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAShSURBVFhHvdd7TFNXHAfw3wbr7NQ94hLnGImTbOJI/GeaZX9sYXMbM5mL8Q/3z2RGk4mbZhth5SVCebT1AmXjoZY9NAiCzJDoyPbHImAVevu6t71t54CWRxYqdEBFnCYE+C3nXm+53NBOsPWPb8gp9/T3yem55wGgYYZBw9wGDTP1iENqDgFoGAyljMS+0I567EIN6WegYYKhhtqGkG9GOGaJTfJJzAJCx9ecIIAp0DL8P9MueFsN3Pi+3Kv+jOwVRuyb1enPyDMKIW1Vlz9DS48dyOwYKYFSO0IxP9KTAoCIjltwT9vgDgM3DrlX/ZC9woh9szr9kGcUQtqqLj9o6THI7BgBxQkW4bgVQSsFFFvx3Wbv0VgDfnRObIkngCI5oMiKO1t9X0YLMDozv2lbras7tcVrkAIMzPirYQFpUQIg4vNxOgfCF0aEQ0Y81j16WQTozWPhAR/9sgBIrHPXKyknA2ob836rr1peSMzWn/4yQrHN+nSlk4srZQ6Svl0376bDwU6EKg7h624EHYsioMIcCA/YdXEBoCx33IUiG0K2Cbed7Q3IC4tJqHUj5JgQSmwIavuZ+wBI+uEGwpFrfNp8U+plA57RcyYosSPkmfHNxr4r8sJiNp3yzPLvtsaOz33HFUoAUNA5sieHDrzW5psKzYHTkebAIkAlZ5YAOuWFJYB58gwBrC53FskAkEMHYOzfucdEQL1jInYAhY4NATae9KCyxIZPUSwm1rmrREADNxllwGnPnAhQSkZgrd6J8K2JX4IVlIMSAU3u6ANCIyAFJNa5EQos/Ob2QrWrSAQ0RhuQFAbwEnk7CKDUjuu/XwHgWf0DA5b8CVYE+FgCWHXCYeF3rXwzbm/o65AXFpNc75nhAVp+r1c/FEC6Eq7VO91QbENQmXBHi/d3eWExiScXCq2udJY/FODt894Q4LPfhi/DNz0IWT34RlO/X15YTDzl5LdyyKaxmgkcFgEv1qwA8FbjAuCMZ/IQv5SSTSXfjL23Z16WF59H3Aq5NFmC+ddt6M7MBhGwvtq1fMB7LYsAoKxwIORahIcLrZh/7eb+cksgufnP4JacrhEVv1eUMghHruPrjX23hu7M8H0jjUBDJMCHku2YANr/nj4Mn14RzotkPmTTqKhwCu0sk3CGJEU+N2JwDj+QAhLJHCA/TZkdN1S7Cx9oBJYAwCftw3bI7EH4qlvoRHY+csAstCL5XKG24r4/RqjgHIIUAFoW4eh1fhJDKVMnApo9ywdA+8D09r1tA7+uoxy4hmIxXsdigp6bTr80eG743qxi+N4syAHvnO+/lVTjmt1s8GBqk1clAs5yETajCADY2zYA6ygHrKFYiNexkKDnIP3SIJDiYQCQVOOCzQYPpDZ5Q9vxKSYCIK3VFzqUxgrws2MiOSxgZ6tv1yMAwJPUUsfyAgvuvjhQduFGcGOVJZBSTi8ORQdSKulAis40yrcrl3jm/1LL/PMKRY/tjicTVG0NXUyEq1kZg3FaFldRDnxcyyIZpmjnCTL0GlZYO4TrIH81ExrkrkauS+T1IrpYRPxu2eW0nx8KDRPgo73/NxZZ/N2kZu9/PqMYP3lO0UYAAAAASUVORK5CYII=" InformativeScreenshot="79c1322d720d73b59cc59cfe6f40de85.jpg" Reference="XJ_4MSH4jkCf8DDO83VaPA/JTiQstEwBkyxdJxVlV0I9Q" Selector="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" Url="https://acme-test.uipath.com/medical/insurance" Version="V2">
+                                <uix:TargetApp.Arguments>
+                                  <InArgument x:TypeArguments="x:String" />
+                                </uix:TargetApp.Arguments>
+                                <uix:TargetApp.WorkingDirectory>
+                                  <InArgument x:TypeArguments="x:String" />
+                                </uix:TargetApp.WorkingDirectory>
+                              </uix:TargetApp>
+                            </uix:NApplicationCard.TargetApp>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="547.3333333333334,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Object">[CurrentTransaction.SpecificContent("Estado")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Object">["Registrado"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
                   </Sequence>
                 </ActivityAction>
-              </uix:NApplicationCard.Body>
-              <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="bi_gI719rkqPHAcIuARulg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAShSURBVFhHvdd7TFNXHAfw3wbr7NQ94hLnGImTbOJI/GeaZX9sYXMbM5mL8Q/3z2RGk4mbZhth5SVCebT1AmXjoZY9NAiCzJDoyPbHImAVevu6t71t54CWRxYqdEBFnCYE+C3nXm+53NBOsPWPb8gp9/T3yem55wGgYYZBw9wGDTP1iENqDgFoGAyljMS+0I567EIN6WegYYKhhtqGkG9GOGaJTfJJzAJCx9ecIIAp0DL8P9MueFsN3Pi+3Kv+jOwVRuyb1enPyDMKIW1Vlz9DS48dyOwYKYFSO0IxP9KTAoCIjltwT9vgDgM3DrlX/ZC9woh9szr9kGcUQtqqLj9o6THI7BgBxQkW4bgVQSsFFFvx3Wbv0VgDfnRObIkngCI5oMiKO1t9X0YLMDozv2lbras7tcVrkAIMzPirYQFpUQIg4vNxOgfCF0aEQ0Y81j16WQTozWPhAR/9sgBIrHPXKyknA2ob836rr1peSMzWn/4yQrHN+nSlk4srZQ6Svl0376bDwU6EKg7h624EHYsioMIcCA/YdXEBoCx33IUiG0K2Cbed7Q3IC4tJqHUj5JgQSmwIavuZ+wBI+uEGwpFrfNp8U+plA57RcyYosSPkmfHNxr4r8sJiNp3yzPLvtsaOz33HFUoAUNA5sieHDrzW5psKzYHTkebAIkAlZ5YAOuWFJYB58gwBrC53FskAkEMHYOzfucdEQL1jInYAhY4NATae9KCyxIZPUSwm1rmrREADNxllwGnPnAhQSkZgrd6J8K2JX4IVlIMSAU3u6ANCIyAFJNa5EQos/Ob2QrWrSAQ0RhuQFAbwEnk7CKDUjuu/XwHgWf0DA5b8CVYE+FgCWHXCYeF3rXwzbm/o65AXFpNc75nhAVp+r1c/FEC6Eq7VO91QbENQmXBHi/d3eWExiScXCq2udJY/FODt894Q4LPfhi/DNz0IWT34RlO/X15YTDzl5LdyyKaxmgkcFgEv1qwA8FbjAuCMZ/IQv5SSTSXfjL23Z16WF59H3Aq5NFmC+ddt6M7MBhGwvtq1fMB7LYsAoKxwIORahIcLrZh/7eb+cksgufnP4JacrhEVv1eUMghHruPrjX23hu7M8H0jjUBDJMCHku2YANr/nj4Mn14RzotkPmTTqKhwCu0sk3CGJEU+N2JwDj+QAhLJHCA/TZkdN1S7Cx9oBJYAwCftw3bI7EH4qlvoRHY+csAstCL5XKG24r4/RqjgHIIUAFoW4eh1fhJDKVMnApo9ywdA+8D09r1tA7+uoxy4hmIxXsdigp6bTr80eG743qxi+N4syAHvnO+/lVTjmt1s8GBqk1clAs5yETajCADY2zYA6ygHrKFYiNexkKDnIP3SIJDiYQCQVOOCzQYPpDZ5Q9vxKSYCIK3VFzqUxgrws2MiOSxgZ6tv1yMAwJPUUsfyAgvuvjhQduFGcGOVJZBSTi8ORQdSKulAis40yrcrl3jm/1LL/PMKRY/tjicTVG0NXUyEq1kZg3FaFldRDnxcyyIZpmjnCTL0GlZYO4TrIH81ExrkrkauS+T1IrpYRPxu2eW0nx8KDRPgo73/NxZZ/N2kZu9/PqMYP3lO0UYAAAAASUVORK5CYII=" InformativeScreenshot="2a1af46fafe13af914236b481b44f5db.jpg" Reference="XJ_4MSH4jkCf8DDO83VaPA/yqTO6p-W0UC24HzhXHPt4Q" Selector="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" Url="https://acme-test.uipath.com/medical/insurance" Version="V2">
-                  <uix:TargetApp.Arguments>
-                    <InArgument x:TypeArguments="x:String" />
-                  </uix:TargetApp.Arguments>
-                  <uix:TargetApp.WorkingDirectory>
-                    <InArgument x:TypeArguments="x:String" />
-                  </uix:TargetApp.WorkingDirectory>
-                </uix:TargetApp>
-              </uix:NApplicationCard.TargetApp>
-            </uix:NApplicationCard>
-            <Assign DisplayName="Asignar" sap:VirtualizedContainerService.HintSize="583.3333333333334,167.33333333333334" sap2010:WorkflowViewState.IdRef="Assign_4">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Object">[CurrentTransaction.SpecificContent("Estado")]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Object">["Registrado"]</InArgument>
-              </Assign.Value>
-            </Assign>
+              </ui:RetryScope.ActivityBody>
+              <ui:RetryScope.Condition>
+                <ActivityFunc x:TypeArguments="x:Boolean">
+                  <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Comprobar Verdadero" Expression="[CurrentTransaction.SpecificContent(&quot;Estado&quot;) is &quot;Registrado&quot;]" sap:VirtualizedContainerService.HintSize="581.3333333333334,132" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+                </ActivityFunc>
+              </ui:RetryScope.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:RetryScope>
           </Sequence>
         </ActivityAction>
-      </ui:RetryScope.ActivityBody>
-      <ui:RetryScope.Condition>
-        <ActivityFunc x:TypeArguments="x:Boolean">
-          <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Comprobar Verdadero" Expression="[CurrentTransaction.SpecificContent(&quot;Estado&quot;) is &quot;Registrado&quot;]" sap:VirtualizedContainerService.HintSize="617.3333333333334,132" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
-        </ActivityFunc>
-      </ui:RetryScope.Condition>
-    </ui:RetryScope>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" ContentHash="QwRYmqfR1kmQVhUW2AHaKg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAShSURBVFhHvdd7TFNXHAfw3wbr7NQ94hLnGImTbOJI/GeaZX9sYXMbM5mL8Q/3z2RGk4mbZhth5SVCebT1AmXjoZY9NAiCzJDoyPbHImAVevu6t71t54CWRxYqdEBFnCYE+C3nXm+53NBOsPWPb8gp9/T3yem55wGgYYZBw9wGDTP1iENqDgFoGAyljMS+0I567EIN6WegYYKhhtqGkG9GOGaJTfJJzAJCx9ecIIAp0DL8P9MueFsN3Pi+3Kv+jOwVRuyb1enPyDMKIW1Vlz9DS48dyOwYKYFSO0IxP9KTAoCIjltwT9vgDgM3DrlX/ZC9woh9szr9kGcUQtqqLj9o6THI7BgBxQkW4bgVQSsFFFvx3Wbv0VgDfnRObIkngCI5oMiKO1t9X0YLMDozv2lbras7tcVrkAIMzPirYQFpUQIg4vNxOgfCF0aEQ0Y81j16WQTozWPhAR/9sgBIrHPXKyknA2ob836rr1peSMzWn/4yQrHN+nSlk4srZQ6Svl0376bDwU6EKg7h624EHYsioMIcCA/YdXEBoCx33IUiG0K2Cbed7Q3IC4tJqHUj5JgQSmwIavuZ+wBI+uEGwpFrfNp8U+plA57RcyYosSPkmfHNxr4r8sJiNp3yzPLvtsaOz33HFUoAUNA5sieHDrzW5psKzYHTkebAIkAlZ5YAOuWFJYB58gwBrC53FskAkEMHYOzfucdEQL1jInYAhY4NATae9KCyxIZPUSwm1rmrREADNxllwGnPnAhQSkZgrd6J8K2JX4IVlIMSAU3u6ANCIyAFJNa5EQos/Ob2QrWrSAQ0RhuQFAbwEnk7CKDUjuu/XwHgWf0DA5b8CVYE+FgCWHXCYeF3rXwzbm/o65AXFpNc75nhAVp+r1c/FEC6Eq7VO91QbENQmXBHi/d3eWExiScXCq2udJY/FODt894Q4LPfhi/DNz0IWT34RlO/X15YTDzl5LdyyKaxmgkcFgEv1qwA8FbjAuCMZ/IQv5SSTSXfjL23Z16WF59H3Aq5NFmC+ddt6M7MBhGwvtq1fMB7LYsAoKxwIORahIcLrZh/7eb+cksgufnP4JacrhEVv1eUMghHruPrjX23hu7M8H0jjUBDJMCHku2YANr/nj4Mn14RzotkPmTTqKhwCu0sk3CGJEU+N2JwDj+QAhLJHCA/TZkdN1S7Cx9oBJYAwCftw3bI7EH4qlvoRHY+csAstCL5XKG24r4/RqjgHIIUAFoW4eh1fhJDKVMnApo9ywdA+8D09r1tA7+uoxy4hmIxXsdigp6bTr80eG743qxi+N4syAHvnO+/lVTjmt1s8GBqk1clAs5yETajCADY2zYA6ygHrKFYiNexkKDnIP3SIJDiYQCQVOOCzQYPpDZ5Q9vxKSYCIK3VFzqUxgrws2MiOSxgZ6tv1yMAwJPUUsfyAgvuvjhQduFGcGOVJZBSTi8ORQdSKulAis40yrcrl3jm/1LL/PMKRY/tjicTVG0NXUyEq1kZg3FaFldRDnxcyyIZpmjnCTL0GlZYO4TrIH81ExrkrkauS+T1IrpYRPxu2eW0nx8KDRPgo73/NxZZ/N2kZu9/PqMYP3lO0UYAAAAASUVORK5CYII=" InformativeScreenshot="79c1322d720d73b59cc59cfe6f40de85.jpg" Reference="XJ_4MSH4jkCf8DDO83VaPA/JTiQstEwBkyxdJxVlV0I9Q" Selector="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" Url="https://acme-test.uipath.com/medical/insurance" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
   </Sequence>
 </Activity>
