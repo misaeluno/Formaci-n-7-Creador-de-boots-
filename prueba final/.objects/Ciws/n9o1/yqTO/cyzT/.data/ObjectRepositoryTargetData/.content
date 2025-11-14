@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zaGsjlNAvkGH3T6-xNM2uw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvElementArea="207, 817, 732, 85" CvType="InputBox" DesignTimeRectangle="210, 819, 727, 80" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='diagnosis_description' tag='TEXTAREA' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="4231b3f6-f85d-4ace-b663-85ee0b5631b4" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="207, 786, 231, 24" CvTextArgument="Diagnosis Description:" CvType="Text" DesignTimeRectangle="210, 782, 228, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Diagnosis Description:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Diagnosis Description:' /&gt;" Guid="0fefd445-80d9-4476-9704-7e9cdc9b0f99" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="bfe66aa9556182a8d529aaf736e328ac.png" xmlns="">0Q0-TwQcldEuYLwE_gBpEWQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

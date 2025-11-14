@@ -1,0 +1,14 @@
+﻿{
+  "Name": "'Correo'",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Yb2z6az--0i0Xmg4rkhUKQ",
+  "Reference": "XJ_4MSH4jkCf8DDO83VaPA/Yb2z6az--0i0Xmg4rkhUKQ",
+  "ParentRef": "XJ_4MSH4jkCf8DDO83VaPA/-vTsG5zCdEm8X3cOn-3GvA",
+  "Created": "2025-11-13T21:10:39.7601896Z",
+  "Updated": "2025-11-13T21:10:39.7601896Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

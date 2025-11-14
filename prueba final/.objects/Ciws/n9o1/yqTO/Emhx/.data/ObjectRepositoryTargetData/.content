@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pSyW3lbddkWf_LXJPTx9jw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" CvElementArea="206, 757, 733, 84" CvType="InputBox" DesignTimeRectangle="210, 760, 727, 80" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='medication' tag='TEXTAREA' type='text' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e8ca374f-58e4-410a-88ac-8c9f7d7e010e" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="53dbebf5-d4ee-4424-853e-a6eea5c4a2ae" CvTextArea="207, 728, 118, 19" CvTextArgument="Medication:" CvType="Text" DesignTimeRectangle="210, 723, 116, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Medication:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Medication:' /&gt;" Guid="f8bb8178-a510-4627-87d2-1a979277f692" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="826a193de845bf7c2bfb0a62ce470dc2.png" xmlns="">0wIxmO1DQIEWSYpXsGuIvfQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

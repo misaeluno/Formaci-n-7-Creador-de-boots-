@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Medication",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Emhx66xjF0SFs8BL800V0w",
+  "Reference": "XJ_4MSH4jkCf8DDO83VaPA/Emhx66xjF0SFs8BL800V0w",
+  "ParentRef": "XJ_4MSH4jkCf8DDO83VaPA/yqTO6p-W0UC24HzhXHPt4Q",
+  "Created": "2025-11-14T01:16:35.909986Z",
+  "Updated": "2025-11-14T01:16:35.909986Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="SL6lUQfvDUi82pim_XSNKw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="acme-test.uipath.com/medical/insurance" CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvElementArea="209, 484, 729, 54" CvType="InputBox" DesignTimeRectangle="210, 486, 727, 51" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='gender' tag='SELECT' type='' class='form-control' aaname='' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="a70fc8e9-fc31-449d-9d22-8b801dae3088" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - National Insurance Planning' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5aa036b0-b621-4cfe-8ae5-e593df60a175" CvTextArea="207, 453, 81, 19" CvTextArgument="Gender:" CvType="Text" DesignTimeRectangle="210, 449, 80, 30" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Gender:' tag='LABEL' type='' class='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Gender:' /&gt;" Guid="1f0bb2ea-1dd5-4885-b266-0a649ba4626e" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="3c542b6de98b583c32fd888fcfebdb6a.png" xmlns="">0kTaCkDOZ2kuSQMsQlw3Kqw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

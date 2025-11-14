@@ -1,0 +1,12 @@
+﻿{
+  "Name": "ACME System 1 - Log In - HP Sure Click Secure Browser",
+  "Type": "App",
+  "Id": "Nq2J45j0qU-aIe8-EF_vZg",
+  "Reference": "LEMgklqpkUu7WuSGAvJwcw/Nq2J45j0qU-aIe8-EF_vZg",
+  "Created": "2025-11-13T14:21:53.5602243Z",
+  "Updated": "2025-11-13T14:21:53.5602243Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.19.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
