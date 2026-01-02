@@ -1,0 +1,25 @@
+Como puede ver hay muchos archivos y aqui una explicacion y como usar este bot de python
+
+1-fix_dependencies.py = 
+    este archivo comprueba las dependencias como "numpy" y "panda"
+    , si las librerias no estan instaladas o no son las verciones
+    compatibles, las instalas
+
+2-create_config_simple.py  = 
+    Este archivo crea el archivo exel "config.xlsx"
+
+3-main.py =
+    es el archivo principal, donde estan todaslas actividades
+    leer el "config.xlsx" y recuperar las contraseñas
+    abrir ACME, iniciar secion, abrir work item, recuperar
+    los datos de la tabla.
+
+4-Ejecutable.py = 
+    su trabajo es crear los archivos "create_config_simple.py" y 
+    "fix_dependencies.py", para luego ejecutarlos en orden
+    1-fix_dependencies
+    2-config
+    3-main
+
+Si todas las dependencias funcionan y tiene el archivo "config.xlsx"
+solo ejecute main.py
